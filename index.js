@@ -1,3 +1,1 @@
-<script>
-   alert("hoge");
-</script>
+alert("hoge");
