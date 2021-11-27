@@ -2,7 +2,7 @@
 //   共通コンポーネント
 //----------------------------------------------------------------------
 
-//  display module
+//  display console.log
 //---------------------------------------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,4 +25,16 @@ function display(val){
 }
 
 ~(_=>{
+   
 })``;
+
+//  cache control
+//---------------------------------------------------------------
+
+function cache(){
+   let css_files = document.querySelectorAll('link');
+   css_files.forEach(css_file => {
+      let path = css_file.getAttribute('href');
+      css_file.setAttribute('href', path + '?' + new Date().getTime());
+   });
+}
